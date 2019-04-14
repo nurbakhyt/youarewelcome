@@ -1,15 +1,17 @@
 <template>
   <div class="app">
-    <b-container>
-      <div class="messages-list">
+    <chat-header/>
+
+    <div class="messages-list">
+      <b-container>
         <message
           v-for="(message, index) in messages"
           :key="index"
           :message="message"
           b-container
         />
-      </div>
-    </b-container>
+      </b-container>
+    </div>
 
     <message-input @inputMessage="addedMessage"/>
   </div>
@@ -19,12 +21,14 @@
 import axios from 'axios';
 import Message from './components/Message';
 import MessageInput from './components/Input';
+import ChatHeader from './components/Header';
 
 export default {
   name: 'Chat',
   components: {
     Message,
-    MessageInput
+    MessageInput,
+    ChatHeader
   },
   data () {
     return {
@@ -76,6 +80,6 @@ export default {
     overflow-y: auto;
   }
   .messages-list {
-
+    padding-top: 2em;
   }
 </style>
