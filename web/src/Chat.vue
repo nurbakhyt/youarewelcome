@@ -54,6 +54,12 @@ export default {
               own: false
             });
           }
+        })
+        .catch(() => {
+          this.messages.push({
+            text: 'Нет соединения, проверьте связь..',
+            own: false
+          });
         });
     }
   }
