@@ -54,12 +54,16 @@ export default {
               own: false
             });
           }
+
+          window.scrollTo(0, document.body.scrollHeight);
         })
         .catch(() => {
           this.messages.push({
             text: 'Нет соединения, проверьте связь..',
             own: false
           });
+
+          window.scrollTo(0, document.body.scrollHeight);
         });
     }
   }
