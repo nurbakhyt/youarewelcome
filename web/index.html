@@ -1,70 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Огонь!</title>
-  <link rel="shortcut icon" href="/favicon.ico" />
-  <!-- это можно выкинуть и заменить своими стилями -->
-  <link rel="stylesheet" type="text/css" href="/styles.css">
-  <!-- например, можно заюзать Bootstrap: -->
-  <!--<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css">-->
+  <title>web</title>
 </head>
 <body>
-  <p>Оно работает!<br /> Полдела сделано :)</p>
-  <p><strong>Дано:</strong> сервер, который умеет API из одного вызова.<br/>
-    На входе одна фраза (вопрос), на выходе другая (ответ).<br/> Действующий макет:</p>
-  <form
-    class="form-inline"
-    onsubmit="$.post('/api/get-answer', {q: this.q.value}).done(function(resp) {
-      if (resp.ok) {
-        alert(resp.a)
-      } else {
-        console.log('ERR:', resp.error);
-      }
-    }); return false">
-    <input name="q" type="text" placeholder="Введите вопрос" autofocus>
-    <button type="submit">Узнать ответ</button>
-    <div>
-      <small>На одинаковые вопросы будут одинаковые ответы</small>
-    </div>
-  </form>
-  <p><strong>Что надо:</strong> сделать из этого &uarr; убожества <em>няшный прототип</em> чатика на
-    двоих (вопрос-ответ, вопрос-ответ).</p>
-  <ul>
-    <li>
-      «няшный» означает, что вам самим должно понравиться то, что получилось: маленькое, 
-      симпатичное, так и хочется кому-то ещё показать;
-    </li>
-    <li>
-      «прототип» означает, что вы не потратите на это слишком много времени.
-      Сами решайте, что надо сделать обязательно, а что можно и выкинуть.
-    </li>
-  </ul>
-  <p>Важно: получившаяся страница должна выглядеть пусть и минималистично, но цельно 
-    и самодостаточно. Примеры цельности, самодостаточности и минимализма: 
-    <a href="https://ya.ru/">ya.ru</a>, <a href="https://telegra.ph/">telegra.ph</a></p>
-  <p><small>Примечание: сервер уже есть, его трогать не надо. В частности, 
-    не надо его переписывать на Node.js. Его надо просто использовать. 
-    А вот фронтенд можно и нужно переработать.</small></p>
-  <p>В качестве образца того, как выглядит и как работает чатик, можно взять
-    любой мессенджер, любую соцсеть, любой продающий чат-консультант
-    (вы на нашем сайте уже 3 секунды. Чем могу помочь?). Короче, собственный опыт и здравый смысл.</p>
-  <p>Решение должно использовать:</p>
-  <ul>
-    <li>Vue.js</li>
-    <li>Bootstrap либо свою вёрстку</li>
-    <li>SASS, LESS, PostCSS и т.п. можно</li>
-    <li>ES6, ES7 можно</li>
-    <li>jQuery, если по какой-то причине потребуется, можно</li>
-  </ul>
-  
-  <p>Нельзя использовать CoffeeScript.<br />
-    Про остальное лучше посоветоваться.</p>
- 
-  <p>...и чем меньше кода будет, тем лучше:</p>
-  <p><img src="errors.jpg"></p>
-
-  <!-- jQuery совершенно не обязателен. Вообще, весь этот файл дан просто для примера -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<div id="app"></div>
+<script src="/dist/build.js"></script>
 </body>
 </html>
