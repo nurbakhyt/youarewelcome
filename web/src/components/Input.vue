@@ -6,7 +6,7 @@
     >
       <b-row>
         <b-col
-          xs="6"
+          cols="7"
           sm="8"
           md="9"
         >
@@ -19,7 +19,7 @@
           />
         </b-col>
         <b-col
-          xs="6"
+          cols="5"
           sm="4"
           md="3"
         >
@@ -54,12 +54,13 @@
 
 <style lang="scss">
   .message-input {
+    box-shadow: 0 0 4px 0 #ccc;
+    background-color: #fff;
     position: fixed;
     right: 0;
     left: 0;
     bottom: 0;
     padding-top: 1em;
-    padding-bottom: 1em;
 
     &__field,
     &__btn {
